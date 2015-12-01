@@ -1,0 +1,6 @@
+- [ ] write tests
+- [ ] hook up travis
+- [ ] hook up coveralls
+- [ ] write readme
+- [ ] add license
+- [ ] publish on npm
