@@ -13,6 +13,13 @@ const globby = require('globby')
 //----------------------------------------------------------
 // logic
 //----------------------------------------------------------
+/**
+ * @func writeOut
+ * @desc generate import statements and write to file
+ * @param {string} dir - top level directory containing dirs to index
+ * @param {string} subdir - directory to index contents of
+ * @returns {undefined}
+ */
 function writeOut(dir, subdir) {
   return fs.writeFileSync(
     p.join(dir, `${subdir}.js`),
@@ -24,6 +31,13 @@ function writeOut(dir, subdir) {
   )
 }
 
+/**
+ * @func autoImport
+ * @desc get dirs to index and iteratively call writeOut
+ * @param {string} dir - top level directory containing dirs to index
+ * @param {string|array} ignore - subdirectories to ignore
+ * @returns {undefined}
+ */
 function autoImport(dir, ignore) {
   if (ignore) {
     const formatter = toIgnore => p.join(dir, toIgnore, p.sep)

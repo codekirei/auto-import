@@ -1,5 +1,5 @@
 - [X] write tests
-- [ ] docstrings
+- [X] docstrings
 - [ ] hook up travis
 - [ ] hook up coveralls
 - [ ] make example
