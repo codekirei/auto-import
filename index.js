@@ -13,21 +13,18 @@ const globby = require('globby')
 //----------------------------------------------------------
 // logic
 //----------------------------------------------------------
-function writeFile(dir, subdir, ft) {
-  return globby(p.join(dir, subdir, `*.${ft}`)).then(res => {
-    fs.writeFileSync(
-      p.join(dir, `${subdir}.js`),
-      res.map(file => file.replace(dir, '.'))
-        .map(file => file.replace(`.${ft}`, ''))
-        .map(file => `import '${file}'`)
-        .join('\n')
-    )
-  })
+function writeOut(dir, subdir) {
+  return fs.writeFileSync(
+    p.join(dir, `${subdir}.js`),
+    globby.sync(p.join(dir, subdir, `*.js`))
+      .map(file => file.replace(dir, '.'))
+      .map(file => file.replace(`.js`, ''))
+      .map(file => `import '${file}'`)
+      .join('\n')
+  )
 }
 
-function autoImport(dir, ft, ignore) {
-  ft = ft || 'js'
-
+function autoImport(dir, ignore) {
   if (ignore) {
     const formatter = toIgnore => p.join(dir, toIgnore, p.sep)
     ignore = typeof ignore === 'string'
@@ -35,11 +32,9 @@ function autoImport(dir, ft, ignore) {
       : ignore.map(toIgnore => formatter(toIgnore))
   }
 
-  return globby(p.join(dir, '*', p.sep))
-    .then(res => res
-      .filter(path => ignore ? ignore.every(ignored => path !== ignored) : path)
-      .map(path => writeFile(dir, p.basename(path), ft))
-    )
+  return globby.sync(p.join(dir, '*', p.sep))
+    .filter(path => ignore ? ignore.every(_ => path !== _) : path)
+    .map(path => writeOut(dir, p.basename(path)))
 }
 
 //----------------------------------------------------------

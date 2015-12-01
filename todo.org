@@ -1,7 +1,8 @@
-- [ ] write tests
+- [X] write tests
 - [ ] docstrings
 - [ ] hook up travis
 - [ ] hook up coveralls
+- [ ] make example
 - [ ] write readme
-- [ ] add license
+- [X] add license
 - [ ] publish on npm
