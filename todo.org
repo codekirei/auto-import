@@ -1,7 +1,7 @@
 - [X] write tests
 - [X] docstrings
-- [ ] hook up travis
-- [ ] hook up coveralls
+- [X] hook up travis
+- [X] hook up coveralls
 - [-] make example
   - [X] code
   - [ ] readme
