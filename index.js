@@ -26,6 +26,8 @@ function writeFile(dir, subdir, ft) {
 }
 
 function autoImport(dir, ft, ignore) {
+  ft = ft || 'js'
+
   if (ignore) {
     const formatter = toIgnore => p.join(dir, toIgnore, p.sep)
     ignore = typeof ignore === 'string'
