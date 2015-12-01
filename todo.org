@@ -2,7 +2,9 @@
 - [X] docstrings
 - [ ] hook up travis
 - [ ] hook up coveralls
-- [ ] make example
+- [-] make example
+  - [X] code
+  - [ ] readme
 - [ ] write readme
 - [X] add license
 - [ ] publish on npm
