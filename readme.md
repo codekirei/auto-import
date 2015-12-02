@@ -1,4 +1,6 @@
-# `auto-import` [![Build Status][b-img]][b-url] [![Coverage Status][c-img]][c-url]
+# `auto-import`
+
+[![Build Status][b-img]][b-url] [![Coverage Status][c-img]][c-url]
 
 <b>[About](#about)</b> |
 <b>[Why](#why)</b> |
