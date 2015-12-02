@@ -93,10 +93,12 @@ The respective bundles in `example/dist` will update accordingly.
 
 [MIT](https://github.com/codekirei/auto-import/blob/master/license)
 
-<!--travis-->
-[b-url]: https://travis-ci.org/codekirei/auto-import
-[b-img]: https://travis-ci.org/codekirei/auto-import.svg?branch=master
+<!--
+  travis
+  [b-url]: https://travis-ci.org/codekirei/auto-import
+  [b-img]: https://travis-ci.org/codekirei/auto-import.svg?branch=master
 
-<!--coveralls-->
-[c-url]: https://coveralls.io/github/codekirei/auto-import?branch=master
-[c-img]: https://coveralls.io/repos/codekirei/auto-import/badge.svg?branch=master&service=github
+  coveralls
+  [c-url]: https://coveralls.io/github/codekirei/auto-import?branch=master
+  [c-img]: https://coveralls.io/repos/codekirei/auto-import/badge.svg?branch=master&service=github
+-->
