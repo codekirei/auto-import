@@ -44,8 +44,9 @@ describe('autoImport', () => {
     const main = spy.args.filter(_ => _[0] === 'fixtures/main.js')
     const text = main[0][1]
     const expected =
-      `import './main/a'\n` +
-      `import './main/b'`
+      [ `import './main/a'`
+      , `import './main/b'`
+      ].join('\n').concat('\n')
 
     assert(spy.calledThrice)
     assert.equal(main.length, 1)

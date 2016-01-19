@@ -28,6 +28,7 @@ function writeOut(dir, subdir) {
       .map(file => file.replace(`.js`, ''))
       .map(file => `import '${file}'`)
       .join('\n')
+      .concat('\n')
   )
 }
 
