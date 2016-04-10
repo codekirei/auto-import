@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/codekirei/auto-import#readme",
   "dependencies": {
-    "globby": "^4.0.0"
+    "globby": "4.0.0"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "istanbul": "^0.4.1",
-    "mocha": "^2.3.4",
-    "mock-fs": "^3.5.0",
-    "sinon": "^1.17.2"
+    "chai": "3.5.0",
+    "istanbul": "0.4.3",
+    "mocha": "2.4.5",
+    "mock-fs": "3.8.0",
+    "sinon": "1.17.3"
   }
 }
